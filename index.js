@@ -1,23 +1,44 @@
 console.log("Welcome!");
 
-const orderPrompt =
+
+/*const orderPrompt= 
   "Please enter a list of flavors ordered separated by commas and no spaces";
 let order = prompt(orderPrompt);
- 
-function splitOrder (order){
-  const arr =order.split(",");
-  const myOrder={};
-}
+console.log (order) */
+const orderPrompt= prompt(
+  "Please enter a list of flavors ordered separated by commas and no spaces",
+);
 
-function getStats (myOrder, arr){
-  const item= arr[i];
-  for (let i=0; i< arr.length < i++;){
+const strArr= orderPrompt.split(",");
+strArr.push(strArr);
+console.log(strArr)
+
+/* const splitOrder= ((order)=> {
+  const flavors= 
+  const arr =order.split(",");
+  return arr;
+},{})
+console.log (arr);*/
+
+/*function getStats (myOrder, strArr){
+  const item= strArr[i];
+  for (let i=0; i< strArr.length < i++;){
     if (myOrder[item]=== undefined){
       myOrder[item]= 0;
     }else {
       myOrder[item]++;
     }
   }
-  return myOrder;
-}
-console.table (getStats(order))
+  return myOrder; */
+
+
+const stats= strArr.reduce ((acc, curr) =>{
+  if(acc[curr]=== undefined){
+      acc[curr]=0
+  }
+  acc[curr]++
+  return acc
+},{})
+console.table (stats)
+
+
